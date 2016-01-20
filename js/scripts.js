@@ -1,4 +1,12 @@
 var palindromeCheck = function(userInput) {
+  if (textReverser(userInput) === userInput) {
+    return true;
+  } else {
+  return false;
+  };
+};
+
+var textReverser = function(userInput) {
   var wordArray = [];
   var reverseArray = [];
   var reverseText = "";
@@ -11,9 +19,5 @@ var palindromeCheck = function(userInput) {
   reverseArray.forEach(function(character) {
     reverseText += character
   });
-  if (reverseText === userInput) {
-    return true;
-  } else {
-  return false;
-  };
+  return reverseText;
 };
