@@ -21,3 +21,19 @@ var textReverser = function(userInput) {
   });
   return reverseText;
 };
+
+$(document).ready(function() {
+  $("form#palindrome").submit(function(event) {
+    var userInput = $("input#userInput").val();
+    var result = palindromeCheck(userInput)
+     if (result) {
+       $("#result-true").show();
+       $("#result-false").hide();
+     } else {
+       $("#result-false").show();
+       $("#result-true").hide();
+     };
+
+     event.preventDefault();
+  });
+});
